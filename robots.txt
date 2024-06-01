@@ -1,0 +1,2 @@
+User-Agent: *
+Sitemap: https://www.kkoyung.dev/sitemap.xml

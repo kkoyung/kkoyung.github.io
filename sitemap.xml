@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.kkoyung.dev/blog/</loc>
+    <lastmod>2024-04-17T21:26:55+08:00</lastmod>
+  </url><url>
+    <loc>https://www.kkoyung.dev/test-blog-post/</loc>
+    <lastmod>2024-04-17T21:26:55+08:00</lastmod>
+  </url><url>
+    <loc>https://www.kkoyung.dev/</loc>
+    <lastmod>2024-04-17T21:24:44+08:00</lastmod>
+  </url>
+</urlset>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Kingsley Yung</title>
+    <link>https://www.kkoyung.dev/blog/</link>
+    <description>Recent content in Blogs on Kingsley Yung</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, Kingsley Yung.</copyright>
+    <lastBuildDate>Wed, 17 Apr 2024 21:26:55 +0800</lastBuildDate>
+    <atom:link href="https://www.kkoyung.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Blog Post</title>
+      <link>https://www.kkoyung.dev/test-blog-post/</link>
+      <pubDate>Wed, 17 Apr 2024 21:26:55 +0800</pubDate>
+      <guid>https://www.kkoyung.dev/test-blog-post/</guid>
+      <description>This is a blog post for testing.</description>
+    </item>
+  </channel>
+</rss>
