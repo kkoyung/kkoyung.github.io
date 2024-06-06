@@ -1,0 +1,4 @@
+{{ $image := resources.Get "images/propic.jpg" }}
+{{ $image := $image.Resize "x200" }}
+{{ $image := $image.Crop "150x150 Left" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" style="display: block; margin-left: auto; margin-right: auto;">

@@ -3,6 +3,8 @@ title = 'Home'
 date = 2024-04-17T21:24:44+08:00
 +++
 
+{{< propic >}}
+
 Hi, I'm Kingsley Yung, also known as Yung King On (in Cantonese). I'm currently a PhD candidate in theoretical computer science at [CUHK](https://www.cuhk.edu.hk) in Hong Kong, under the supervision of [Andrej Bogdanov](https://andrejb.net/).
 Before starting my PhD, I received my BSc in Mathematics and MSc in Computer Science from the same university.
 
