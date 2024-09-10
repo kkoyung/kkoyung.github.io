@@ -23,5 +23,5 @@ Kingsley Yung\
 - Email: `kingsley AT kkoyung DOT dev`
 - GitHub: [kkoyung](https://github.com/kkoyung)
 - Codeberg: [kkoyung](https://codeberg.org/kkoyung)
-- PGP key: [[from my website](/pubkey_kingsley_at_kkoyung_dot_dev.pem)] [[from openpgp.org](https://keys.openpgp.org/search?q=kingsley%40kkoyung.dev)]
+- PGP key: [[from my website](/pubkey.asc)] [[from openpgp.org](https://keys.openpgp.org/search?q=kingsley%40kkoyung.dev)]
 - PGP key fingerprint: `4F52 422F 9D76 01A8 D6AB  96C5 48E0 5563 B651 FF21`
