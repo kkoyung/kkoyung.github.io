@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, Kingsley Yung.</copyright>
-    <lastBuildDate>Wed, 17 Apr 2024 21:26:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Sep 2024 15:33:16 +0800</lastBuildDate>
     <atom:link href="https://www.kkoyung.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test Blog Post</title>
-      <link>https://www.kkoyung.dev/test-blog-post/</link>
-      <pubDate>Wed, 17 Apr 2024 21:26:55 +0800</pubDate>
-      <guid>https://www.kkoyung.dev/test-blog-post/</guid>
-      <description>This is a blog post for testing.</description>
+      <title>PhD in Computer Science</title>
+      <link>https://www.kkoyung.dev/phd-in-computer-science/</link>
+      <pubDate>Tue, 10 Sep 2024 15:33:16 +0800</pubDate>
+      <guid>https://www.kkoyung.dev/phd-in-computer-science/</guid>
+      <description>&lt;p&gt;Last month, I successfully defended my PhD thesis, and I’ve just submitted the final revisions. I can finally call it complete.&lt;/p&gt;&#xA;&lt;p&gt;Throughout much of my PhD journey, I often felt stuck and frustrated with my research. However, the last year turned out to be incredible. I wrote my first paper, which was initially rejected twice, but eventually accepted by ICALP 2024. Not only was it accepted, but it also received the Best Student Paper Award—something I never expected.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
