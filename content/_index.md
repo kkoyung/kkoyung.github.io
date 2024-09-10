@@ -5,10 +5,10 @@ date = 2024-04-17T21:24:44+08:00
 
 {{< propic >}}
 
-Hi, I'm Kingsley Yung, also known as Yung King On (in Cantonese). I'm currently a PhD candidate in theoretical computer science at [CUHK](https://www.cuhk.edu.hk) in Hong Kong, under the supervision of [Andrej Bogdanov](https://andrejb.net/) and [Farzan Farnia](https://www.cse.cuhk.edu.hk/~farnia/).
+Hi, I'm Kingsley Yung, also known as Yung King On (in Cantonese). I recently got my PhD in computer science at [CUHK](https://www.cuhk.edu.hk) in Hong Kong, under the supervision of [Andrej Bogdanov](https://andrejb.net/) and [Farzan Farnia](https://www.cse.cuhk.edu.hk/~farnia/).
 Before that, I received my BSc in Mathematics and MSc in Computer Science from the same university.
 
-My research interests include probabilistic combinatorics, random constraint satisfaction problems, and any interesting problems in theoretical computer science.
+My research interests include probabilistic combinatorics, random constraint satisfaction problems, average-case complexity, cryptography, and any interesting problems in theoretical computer science.
 
 ## Publications
 
@@ -20,9 +20,8 @@ Kingsley Yung\
 
 ## Contact and Links
 
-- Email: `koyung AT cse.cuhk.edu.hk`
+- Email: `kingsley AT kkoyung DOT dev`
 - GitHub: [kkoyung](https://github.com/kkoyung)
 - Codeberg: [kkoyung](https://codeberg.org/kkoyung)
-- PGP key: [openpgp.org](https://keys.openpgp.org/search?q=kingsley%40kkoyung.dev)
-    - `Kingsley Yung <kingsley@kkoyung.dev>`
-    - `4F52 422F 9D76 01A8 D6AB  96C5 48E0 5563 B651 FF21`
+- PGP key: [[from my website](/pubkey_kingsley_at_kkoyung_dot_dev.pem)] [[from openpgp.org](https://keys.openpgp.org/search?q=kingsley%40kkoyung.dev)]
+- PGP key fingerprint: `4F52 422F 9D76 01A8 D6AB  96C5 48E0 5563 B651 FF21`
