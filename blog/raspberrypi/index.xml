@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Kingsley Yung</title>
-    <link>https://www.kkoyung.dev/blog/</link>
-    <description>Recent content in Blogs on Kingsley Yung</description>
+    <title>Raspberrypi on Kingsley Yung</title>
+    <link>https://www.kkoyung.dev/blog/raspberrypi/</link>
+    <description>Recent content in Raspberrypi on Kingsley Yung</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, Kingsley Yung.</copyright>
     <lastBuildDate>Wed, 11 Sep 2024 10:18:10 +0800</lastBuildDate>
-    <atom:link href="https://www.kkoyung.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.kkoyung.dev/blog/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Access Raspberry Pi From Ipad</title>
       <link>https://www.kkoyung.dev/access-raspberry-pi-from-ipad/</link>
       <pubDate>Wed, 11 Sep 2024 10:18:10 +0800</pubDate>
       <guid>https://www.kkoyung.dev/access-raspberry-pi-from-ipad/</guid>
       <description>&lt;p&gt;I usually work on my desktop computer, so I don&amp;rsquo;t have a laptop to work in a remote location. Two months ago, I had to go to Estonia to participate in &lt;a href=&#34;https://compose.ioc.ee/icalp2024/&#34;&gt;ICALP 2024&lt;/a&gt; to give a talk about my first published conference paper. So, I decided to set up a VPN to allow me to access my desktop computer through remotely from my iPad (10-th generation) using SSH during the trip. This allowed me to edit the slides (written in LaTeX), recompile them to PDF, and download the PDF to my iPad. This workflow worked fine, but I was not 100% satisfied with it. If anything had happened on my desktop or the network connection, it was possible that I couldn&amp;rsquo;t fix it remotely. I was lucky that things went well during my trip.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>PhD in Computer Science</title>
-      <link>https://www.kkoyung.dev/phd-in-computer-science/</link>
-      <pubDate>Tue, 10 Sep 2024 15:33:16 +0800</pubDate>
-      <guid>https://www.kkoyung.dev/phd-in-computer-science/</guid>
-      <description>&lt;p&gt;Last month, I successfully defended my PhD thesis, and I’ve just submitted the final revisions. I can finally call it complete.&lt;/p&gt;&#xA;&lt;p&gt;Throughout much of my PhD journey, I often felt stuck and frustrated with my research. However, the last year turned out to be incredible. I wrote my first paper, which was initially rejected twice, but eventually accepted by ICALP 2024. Not only was it accepted, but it also received the Best Student Paper Award—something I never expected.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

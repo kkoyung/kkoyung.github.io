@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Access Raspberry Pi From Ipad | Kingsley Yung</title>
+<meta name="title" content="Access Raspberry Pi From Ipad" />
+<meta name="description" content="I usually work on my desktop computer, so I don&rsquo;t have a laptop to work in a remote location. Two months ago, I had to go to Estonia to participate in ICALP 2024 to give a talk about my first published conference paper. So, I decided to set up a VPN to allow me to access my desktop computer through remotely from my iPad (10-th generation) using SSH during the trip. This allowed me to edit the slides (written in LaTeX), recompile them to PDF, and download the PDF to my iPad. This workflow worked fine, but I was not 100% satisfied with it. If anything had happened on my desktop or the network connection, it was possible that I couldn&rsquo;t fix it remotely. I was lucky that things went well during my trip." />
+<meta name="keywords" content="raspberrypi,ipad," />
+
+
+<meta property="og:url" content="https://www.kkoyung.dev/access-raspberry-pi-from-ipad/">
+  <meta property="og:site_name" content="Kingsley Yung">
+  <meta property="og:title" content="Access Raspberry Pi From Ipad">
+  <meta property="og:description" content="I usually work on my desktop computer, so I don’t have a laptop to work in a remote location. Two months ago, I had to go to Estonia to participate in ICALP 2024 to give a talk about my first published conference paper. So, I decided to set up a VPN to allow me to access my desktop computer through remotely from my iPad (10-th generation) using SSH during the trip. This allowed me to edit the slides (written in LaTeX), recompile them to PDF, and download the PDF to my iPad. This workflow worked fine, but I was not 100% satisfied with it. If anything had happened on my desktop or the network connection, it was possible that I couldn’t fix it remotely. I was lucky that things went well during my trip.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-09-11T10:18:10+08:00">
+    <meta property="article:modified_time" content="2024-09-11T10:18:10+08:00">
+    <meta property="article:tag" content="Raspberrypi">
+    <meta property="article:tag" content="Ipad">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Access Raspberry Pi From Ipad">
+  <meta name="twitter:description" content="I usually work on my desktop computer, so I don’t have a laptop to work in a remote location. Two months ago, I had to go to Estonia to participate in ICALP 2024 to give a talk about my first published conference paper. So, I decided to set up a VPN to allow me to access my desktop computer through remotely from my iPad (10-th generation) using SSH during the trip. This allowed me to edit the slides (written in LaTeX), recompile them to PDF, and download the PDF to my iPad. This workflow worked fine, but I was not 100% satisfied with it. If anything had happened on my desktop or the network connection, it was possible that I couldn’t fix it remotely. I was lucky that things went well during my trip.">
+
+
+
+
+  <meta itemprop="name" content="Access Raspberry Pi From Ipad">
+  <meta itemprop="description" content="I usually work on my desktop computer, so I don’t have a laptop to work in a remote location. Two months ago, I had to go to Estonia to participate in ICALP 2024 to give a talk about my first published conference paper. So, I decided to set up a VPN to allow me to access my desktop computer through remotely from my iPad (10-th generation) using SSH during the trip. This allowed me to edit the slides (written in LaTeX), recompile them to PDF, and download the PDF to my iPad. This workflow worked fine, but I was not 100% satisfied with it. If anything had happened on my desktop or the network connection, it was possible that I couldn’t fix it remotely. I was lucky that things went well during my trip.">
+  <meta itemprop="datePublished" content="2024-09-11T10:18:10+08:00">
+  <meta itemprop="dateModified" content="2024-09-11T10:18:10+08:00">
+  <meta itemprop="wordCount" content="753">
+  <meta itemprop="keywords" content="Raspberrypi,Ipad">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Kingsley Yung</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Access Raspberry Pi From Ipad</h1>
+<p>
+  <i>
+    <time datetime='2024-09-11' pubdate>
+      11 Sep, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>I usually work on my desktop computer, so I don&rsquo;t have a laptop to work in a remote location. Two months ago, I had to go to Estonia to participate in <a href="https://compose.ioc.ee/icalp2024/">ICALP 2024</a> to give a talk about my first published conference paper. So, I decided to set up a VPN to allow me to access my desktop computer through remotely from my iPad (10-th generation) using SSH during the trip. This allowed me to edit the slides (written in LaTeX), recompile them to PDF, and download the PDF to my iPad. This workflow worked fine, but I was not 100% satisfied with it. If anything had happened on my desktop or the network connection, it was possible that I couldn&rsquo;t fix it remotely. I was lucky that things went well during my trip.</p>
+<p>Recently, I started looking for alternative solutions. I don&rsquo;t prefer to buy a new laptop because it would go to waste if I don&rsquo;t use it regularly. Instead, I want to further utilize my iPad, and I found two Linux terminal apps, <a href="https://ish.app/">iSH</a> and <a href="https://github.com/holzschu/a-shell">a-Shell</a>. They work quite well for some simple use cases, but they are still not complete Linux systems.</p>
+<p>I then found a <a href="https://www.youtube.com/watch?v=IR6sDcKo3V8">YouTube video</a> describing how to directly access a Raspberry Pi from an iPad Pro through a single USB-C-to-USB-C cable. It works like this: First, connect the Raspberry Pi to an iPad Pro with a USB-C-to-USB-C cable. The iPad Pro powers up the Raspberry Pi, and the Raspberry Pi is configured as an Ethernet gadget, so the USB-C-to-USB-C cable between them acts like an Ethernet cable. Then, we can access the Raspberry Pi from the iPad Pro through a simple SSH connection. It means you can bring a full Linux system along with my iPad when you go out.</p>
+<p>I was really interested in this idea, so I did some research on the Internet. Most of the videos and documents about this setup used Raspberry Pi 4. A <a href="https://www.hardill.me.uk/wordpress/2023/12/23/pi5-usb-c-gadget/#comment-30693">comment</a> of a blog post mentioned that USB-C port of Raspberry Pi 5 did not work in this setting, but the issue was later resolved by a Raspberry Pi OS update. (See more in this <a href="https://github.com/raspberrypi/bookworm-feedback/issues/77">GitHub issue</a>.) I also found a <a href="https://github.com/verxion/RaspberryPi/">GitHub repository</a> documenting a successful setup with Raspberry Pi 5. Furthermore, since the 10-generation iPad has a USB-C port, it seems possible to do this on my iPad.
+There is only one way to confirm whether it works or not, so I ordered a Raspberry Pi 5.</p>
+<p>It took over a week for my Raspberry Pi to arrive at my home. While I was waiting, I gathered some information and wrote myself a note about the setup so that I could test it out as soon as it arrived. The setup is rather simple. It is so simple that it worked really well on my first try.</p>
+<p>Here is my setup, which is a combination of those from the references listed at the bottom of the blog post. All you need to do is to edit <code>/book/firmware/config.txt</code> and <code>/boot/firmware/cmdline.txt</code> to configure the Raspberry Pi as an Ethernet gadget, and add a file to <code>/etc/network/interfaces.d/</code> to configure the network interface.</p>
+<ol>
+<li>
+<p>Install Raspberry Pi OS on a microSD card with <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a>. Just follow the instructions from Raspberry Pi Image. Remember to provide SSH <code>authorized_keys</code> if you want to access it with public key authentication.</p>
+</li>
+<li>
+<p>Insert the microSD card into the Raspberry Pi, boot the Raspberry Pi, and access it in your perferred way.</p>
+</li>
+<li>
+<p>Add the following to the <code>/boot/firmware/config.txt</code>, <strong>at the bottom, after</strong> <code>[all]</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>dtoverlay=dwc2,dr_mode=peripheral
+</span></span></code></pre></div></li>
+<li>
+<p>Add the following to <code>/boot/firmware/cmdline.txt</code>, <strong>after</strong> <code>rootwait</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>modules-load=dwc2,g_ether
+</span></span></code></pre></div></li>
+<li>
+<p>Configure network as a USB Ethernet gadget. Add file <code>/etc/network/interfaces.d/g_ether</code> with the following content.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>auto usb0
+</span></span><span style="display:flex;"><span>allow-hotplug usb0
+</span></span><span style="display:flex;"><span>iface usb0 inet static
+</span></span><span style="display:flex;"><span>        address 169.254.1.1
+</span></span><span style="display:flex;"><span>        netmask 255.255.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>auto usb0.1
+</span></span><span style="display:flex;"><span>allow-hotplug usb0.1
+</span></span><span style="display:flex;"><span>iface usb0.1 inet dhcp
+</span></span></code></pre></div></li>
+<li>
+<p>(Optional) Configure a similar network for the Ethernet port. Add file <code>/etc/network/interfaces.d/eth0</code> with the following content.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>auto eth00
+</span></span><span style="display:flex;"><span>allow-hotplug eth00
+</span></span><span style="display:flex;"><span>iface eth00 inet static
+</span></span><span style="display:flex;"><span>        address 169.254.1.1
+</span></span><span style="display:flex;"><span>        netmask 255.255.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>auto eth0.1
+</span></span><span style="display:flex;"><span>allow-hotplug etc0.1
+</span></span><span style="display:flex;"><span>iface usb0.1 inet dhcp
+</span></span></code></pre></div></li>
+</ol>
+<p>Now, when you connect the Raspberry Pi to the iPad with USB-C-to-USB-C cable to boot the Raspberry Pi, a new item called &ldquo;Ethernet&rdquo; should show up between &ldquo;Wi-Fi&rdquo; and &ldquo;Bluetooth&rdquo; in the &ldquo;Settings&rdquo; app on iPad. Then, you can access the Raspberry Pi with any SSH client app (I use <a href="https://termius.com/">Termius</a>) through IP address 169.254.1.1.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://github.com/verxion/RaspberryPi/blob/main/Pi5-ethernet-and-power-over-usbc.md">RaspberryPi/Pi5-ethernet-and-power-over-usbc.md at main · verxion/RaspberryPi</a></li>
+<li><a href="https://forums.raspberrypi.com/viewtopic.php?p=2203146#p2203146">Network Manager fallback to zeroconf - Raspberry Pi Forums</a></li>
+<li><a href="https://forums.raspberrypi.com/viewtopic.php?t=364247">STICKY: Bookworm, Point to Point Ethernet (inc g_ether) - Raspberry Pi Forums</a></li>
+</ul>
+
+</content>
+<p>
+  
+  <a href="https://www.kkoyung.dev/blog/raspberrypi/">#Raspberrypi</a>
+  
+  <a href="https://www.kkoyung.dev/blog/ipad/">#Ipad</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
