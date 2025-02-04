@@ -10,13 +10,14 @@ Before that, I received my BSc in Mathematics and MSc in Computer Science from t
 
 My research interests include probabilistic combinatorics, random constraint satisfaction problems, average-case complexity, cryptography, and any interesting problems in theoretical computer science.
 
+Beyond theoretical work, I enjoy programming and contributing to the open-source community. You can find my code in my [GitHub profile](https://github.com/kkoyung). Lately, I've been particularly fascinated by the [Rust programming language](https://www.rust-lang.org/). Its design philosophy resonates with me.
+
 ## Publications
 
 * *Limits of Sequential Local Algorithms on the Random k-XORSAT Problem*\
 Kingsley Yung\
 [ICALP 2024](https://doi.org/10.4230/LIPIcs.ICALP.2024.123) [[arXiv](https://arxiv.org/abs/2404.17775)]\
 **Best Student Paper Award of ICALP 2024**
-
 
 ## Contact and Links
 
