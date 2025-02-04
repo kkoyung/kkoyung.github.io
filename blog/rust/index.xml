@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Adventofcode on Kingsley Yung</title>
-    <link>https://www.kkoyung.dev/blog/adventofcode/</link>
-    <description>Recent content in Adventofcode on Kingsley Yung</description>
+    <title>Rust on Kingsley Yung</title>
+    <link>https://www.kkoyung.dev/blog/rust/</link>
+    <description>Recent content in Rust on Kingsley Yung</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, Kingsley Yung.</copyright>
     <lastBuildDate>Tue, 04 Feb 2025 12:25:16 +0800</lastBuildDate>
-    <atom:link href="https://www.kkoyung.dev/blog/adventofcode/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.kkoyung.dev/blog/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advent of Code 2024 in Rust</title>
       <link>https://www.kkoyung.dev/advent-of-code-2024-in-rust/</link>
