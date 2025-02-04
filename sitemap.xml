@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.kkoyung.dev/access-raspberry-pi-from-ipad/</loc>
-    <lastmod>2024-09-11T10:18:10+08:00</lastmod>
+    <loc>https://www.kkoyung.dev/advent-of-code-2024/</loc>
+    <lastmod>2025-02-04T12:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://www.kkoyung.dev/blog/adventofcode/</loc>
+    <lastmod>2025-02-04T12:25:16+08:00</lastmod>
   </url><url>
     <loc>https://www.kkoyung.dev/blog/</loc>
+    <lastmod>2025-02-04T12:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://www.kkoyung.dev/access-raspberry-pi-from-ipad/</loc>
     <lastmod>2024-09-11T10:18:10+08:00</lastmod>
   </url><url>
     <loc>https://www.kkoyung.dev/blog/ipad/</loc>

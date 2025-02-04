@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advent of Code 2024 | Kingsley Yung</title>
+<meta name="title" content="Advent of Code 2024" />
+<meta name="description" content="Advent of Code is an Advent calendar of small programming puzzles released every December by Eric Wastl. A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.
+I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!" />
+<meta name="keywords" content="adventofcode," />
+
+
+<meta property="og:url" content="https://www.kkoyung.dev/advent-of-code-2024/">
+  <meta property="og:site_name" content="Kingsley Yung">
+  <meta property="og:title" content="Advent of Code 2024">
+  <meta property="og:description" content="Advent of Code is an Advent calendar of small programming puzzles released every December by Eric Wastl. A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.
+I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-02-04T12:25:16+08:00">
+    <meta property="article:modified_time" content="2025-02-04T12:25:16+08:00">
+    <meta property="article:tag" content="Adventofcode">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of Code 2024">
+  <meta name="twitter:description" content="Advent of Code is an Advent calendar of small programming puzzles released every December by Eric Wastl. A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.
+I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!">
+
+
+
+
+  <meta itemprop="name" content="Advent of Code 2024">
+  <meta itemprop="description" content="Advent of Code is an Advent calendar of small programming puzzles released every December by Eric Wastl. A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.
+I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!">
+  <meta itemprop="datePublished" content="2025-02-04T12:25:16+08:00">
+  <meta itemprop="dateModified" content="2025-02-04T12:25:16+08:00">
+  <meta itemprop="wordCount" content="1283">
+  <meta itemprop="keywords" content="Adventofcode">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+<script defer data-domain="kkoyung.dev" src="https://plausible.kkoyung.dev/js/script.js"></script>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Kingsley Yung</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Advent of Code 2024</h1>
+<p>
+  <i>
+    <time datetime='2025-02-04' pubdate>
+      04 Feb, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <p><a href="https://adventofcode.com">Advent of Code</a> is an Advent calendar of small programming puzzles released every December by <a href="http://was.tl/">Eric Wastl</a>. A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.</p>
+<p>I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!</p>
+<p>After solving each puzzle, I jotted down brief notes about what I learned, how I approached the solution, or some random thoughts I had. I&rsquo;d like to share some of them here.</p>
+<h2 id="finding-the-number-of-digits-of-a-number-day-7-bridge-repair">Finding the number of digits of a number (Day 7: Bridge Repair)</h2>
+<p>Finding the number of digits of a number is quite common is programming contest. The straight forward way to do so is to calculate the logarithm of the number. Because of my bad memory, I have to spend extra time every time to decide whether I should round up or round down the logarithm, and whether I should add 1 to the rounded logarithm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> num: <span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12345</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> number_of_digit <span style="color:#f92672">=</span> num.checked_ilog10().unwarp() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 5
+</span></span></span></code></pre></div><p>When I casually searched for the logarithm function in Rust standard library, I found a <a href="https://stackoverflow.com/questions/69297477/getting-the-length-of-an-int">Stack Overflow post</a> mentioning an alternative way, which was kind of eye-opening to me. You can simply convert to the number into a string and get the length of the resultant string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> num: <span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12345</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> number_of_digit <span style="color:#f92672">=</span> num.to_string().len(); <span style="color:#75715e">// 5
+</span></span></span></code></pre></div><p>Why I didn&rsquo;t find this shortcut after years of writing programs?</p>
+<h2 id="iterating-over-vecvect-day-8-resonant-collinearity">Iterating over <code>Vec&lt;Vec&lt;T&gt;&gt;</code> (Day 8: Resonant Collinearity)</h2>
+<p>I used the following snippet a lot to process 2-demensional <code>Vec</code>. It converts a 2-dimensional <code>Vec</code> into an iterator that go through all entries with their indices in tuple.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> matrix <span style="color:#f92672">=</span> vec![
+</span></span><span style="display:flex;"><span>    vec![<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>],
+</span></span><span style="display:flex;"><span>    vec![<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>],
+</span></span><span style="display:flex;"><span>    vec![<span style="color:#e6db74">&#39;g&#39;</span>, <span style="color:#e6db74">&#39;h&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>],
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>matrix
+</span></span><span style="display:flex;"><span>    .iter()
+</span></span><span style="display:flex;"><span>    .enumerate()
+</span></span><span style="display:flex;"><span>    .flat_map(<span style="color:#f92672">|</span>(i, row)<span style="color:#f92672">|</span> {
+</span></span><span style="display:flex;"><span>        row.iter()
+</span></span><span style="display:flex;"><span>            .enumerate()
+</span></span><span style="display:flex;"><span>            .map(<span style="color:#66d9ef">move</span> <span style="color:#f92672">|</span>(j, value)<span style="color:#f92672">|</span> ((i, j), value))
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    .for_each(<span style="color:#f92672">|</span>(index, value)<span style="color:#f92672">|</span> println!(<span style="color:#e6db74">&#34;(</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">): </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, index.<span style="color:#ae81ff">0</span>, index.<span style="color:#ae81ff">1</span>, value));
+</span></span></code></pre></div><p>The output is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>(0, 0): a
+</span></span><span style="display:flex;"><span>(0, 1): b
+</span></span><span style="display:flex;"><span>(0, 2): c
+</span></span><span style="display:flex;"><span>(1, 0): d
+</span></span><span style="display:flex;"><span>(1, 1): e
+</span></span><span style="display:flex;"><span>(1, 2): f
+</span></span><span style="display:flex;"><span>(2, 0): g
+</span></span><span style="display:flex;"><span>(2, 1): h
+</span></span><span style="display:flex;"><span>(2, 2): i
+</span></span></code></pre></div><h2 id="entry-api-day-10-hoof-it">Entry API (Day 10: Hoof It)</h2>
+<p>I had just discovered the Entry API, which provides an idiomatic way to manipulate the contents of a collection. It helps writing more readable code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std::collections::HashMap;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> map: <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> HashMap::new();
+</span></span><span style="display:flex;"><span>map.entry(<span style="color:#e6db74">&#34;my_key&#34;</span>).and_modify(<span style="color:#f92672">|</span>value<span style="color:#f92672">|</span> { <span style="color:#f92672">*</span>value <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>; }).or_insert(<span style="color:#ae81ff">0</span>);
+</span></span></code></pre></div><p>The last line means: Try to find the value with key &ldquo;my_key&rdquo;. If it exists, add 1 to the found value. Otherwise, insert the default value 0 for the key &ldquo;my_key&rdquo;.</p>
+<h2 id="transpose-of-a-matrix-in-vecvect-day-12-garden-groups">Transpose of a matrix in <code>Vec&lt;Vec&lt;T&gt;&gt;</code> (Day 12: Garden Groups)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> matrix <span style="color:#f92672">=</span> vec![vec![<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], vec![<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>], vec![<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> height <span style="color:#f92672">=</span> matrix.len();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> width <span style="color:#f92672">=</span> matrix[<span style="color:#ae81ff">0</span>].len();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> transpose <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>width)
+</span></span><span style="display:flex;"><span>    .map(<span style="color:#f92672">|</span>j<span style="color:#f92672">|</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>height).map(<span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> matrix[i][j]).collect::<span style="color:#f92672">&lt;</span>Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;&gt;</span>())
+</span></span><span style="display:flex;"><span>    .collect::<span style="color:#f92672">&lt;</span>Vec<span style="color:#f92672">&lt;</span>Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;&gt;&gt;</span>();
+</span></span></code></pre></div><h2 id="linear-systems-with-integer-variables-day-13-claw-contraption">Linear systems with integer variables (Day 13: Claw Contraption)</h2>
+<p>When I first saw the problem of day 13, I thought it was an integer programming problem (minimizing a linear combination subject to two linear equations on two integer variables.). However, it is a simple linear system of two integer variables.</p>
+<p>The examples and my input do not contain any case with linear dependent equations. If it had happened, the problem would have fallen back to an integer programming problem, which is more difficult to solve. I guess these cases are not included intentionally to not make the puzzle too difficult.</p>
+<p>The puzzle asks us find the fewest tokens required. However, since each machine is just a system of two linear-independent equations of two variables, there exists unique combination of button A and B to win the prize. So, I think the description &ldquo;no more than 100 times&rdquo; and &ldquo;the fewest tokens&rdquo; are not actual requirement. They are here is for those who try to use brute force method to figure out some implementation.</p>
+<h2 id="reminder-operation-vs-modulus-operation-day-14-restroom-redoubt">Reminder operation v.s. Modulus operation (Day 14: Restroom Redoubt)</h2>
+<p>Be aware that <code>%</code> is the reminder operation, which is different from the modulus operation. Reminder operation and modulus operation give the same result on non-negative integers. For example, <code>21 % 4</code> gives 1 which is same as &ldquo;21 mod 4&rdquo;. However, they act differently on negative integers. For example, <code>-21 % 4</code> means the reminder of -21 divided by 4, which is -1, while &ldquo;-21 mod 4&rdquo; is 3.</p>
+<p>If you want to apply modulus operation, you can do it in the following ways.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> num: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">21</span>;
+</span></span><span style="display:flex;"><span>assert_eq!(((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>); <span style="color:#75715e">// apply % twice
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>assert_eq!(num.rem_euclid(<span style="color:#ae81ff">4</span>), <span style="color:#ae81ff">3</span>);   <span style="color:#75715e">// use rem_euclid()
+</span></span></span></code></pre></div><p>See more on <a href="https://stackoverflow.com/questions/31210357/is-there-a-modulus-not-remainder-function-operation">this StackOverflow post</a>.</p>
+<h2 id="some-useful-packages-day-14-restroom-redoubt">Some useful packages (Day 14: Restroom Redoubt)</h2>
+<h3 id="regex">Regex</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;x=100, y=99&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> regex <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;x=([0-9]+), y=([0-9]+)&#34;</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> caps <span style="color:#f92672">=</span> regex.captures(text).unwrap();
+</span></span><span style="display:flex;"><span>assert!(caps[<span style="color:#ae81ff">1</span>].parse::<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>(), Some(<span style="color:#ae81ff">100</span>)); <span style="color:#75715e">// Group index starts from 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>assert!(caps[<span style="color:#ae81ff">2</span>].parse::<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>(), Some(<span style="color:#ae81ff">99</span>));
+</span></span></code></pre></div><h3 id="image">Image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> width:<span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> height:<span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create an image buffer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> imgbuf: <span style="color:#a6e22e">ImageBuffer</span><span style="color:#f92672">&lt;</span>Rgb<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>, Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">=</span> ImageBuffer::new(width, height);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Put a white dot in the middle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>imgbuf.put_pixel(width <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, height <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, Rgb([<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>])); 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Save the image into a png file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>imgbuf.save(<span style="color:#e6db74">&#34;./images.png&#34;</span>).unwrap();
+</span></span></code></pre></div><h2 id="3bit-processor-emulator-day-17-chronospatial-computer">3bit processor emulator (Day 17: Chronospatial Computer)</h2>
+<p>Part 1 of day 17 is to implement a 3-bit processor emulator. It is pretty straight forward, but it is really fun to do so. Part 2 is to find the initial value of a register so that the given program outputs a copy of itself. Unlike other puzzles, you have to first analyse your input (i.e. disassemble the program) before writing your solution.</p>
+<p>The input is equivalent to the following pseudo-code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>while register_a &gt; 0 {
+</span></span><span style="display:flex;"><span>    Generate one output, which depends on register_b, register_c
+</span></span><span style="display:flex;"><span>    and the last 12 bits of register_a.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    The value of register_a shifts to the right by 3 bits.
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>So, the first output only depends on the 1st to 12th bit of register_a, counted from the least significant bit. The second output only depends on the 4th to 15th bit of register_a, counted from the least significant bit. And so on.</p>
+<p>My solution works in this way:</p>
+<p>Start from a set of possible candidates, consists of all possible 12-bit numbers. Then, find out all possible 12 least significant bits of register_a that give the first correct output number, by running the program on all candidates in brute force way, to form a new set of candidates.</p>
+<p>Next, append all possible 3-bit configurations to all candidates to update the set of candidates. Find out all possible 15 least significant bits of register_a that give the first two correct output numbers, by running the program on all candidates in brute force way, to form a new set of candidates.</p>
+<p>Again, we append all possible 3-bit configurations to all candidates to update the set of candidates. Find out all possible 18 least significant bits of register_a that give the first three correct output numbers, by running the program on all candidates in brute force way, to form a new set of candidates.</p>
+<p>We repeat these steps until we obtain a set of candidates that give all correct output. However, some candidates may give extra output numbers. So, we need to filter them out before giving our final answer.</p>
+
+</content>
+<p>
+  
+  <a href="https://www.kkoyung.dev/blog/adventofcode/">#Adventofcode</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

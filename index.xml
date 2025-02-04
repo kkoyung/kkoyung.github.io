@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, Kingsley Yung.</copyright>
-    <lastBuildDate>Wed, 11 Sep 2024 10:18:10 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2025 12:25:16 +0800</lastBuildDate>
     <atom:link href="https://www.kkoyung.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of Code 2024</title>
+      <link>https://www.kkoyung.dev/advent-of-code-2024/</link>
+      <pubDate>Tue, 04 Feb 2025 12:25:16 +0800</pubDate>
+      <guid>https://www.kkoyung.dev/advent-of-code-2024/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://adventofcode.com&#34;&gt;Advent of Code&lt;/a&gt; is an Advent calendar of small programming puzzles released every December by &lt;a href=&#34;http://was.tl/&#34;&gt;Eric Wastl&lt;/a&gt;. A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.&lt;/p&gt;&#xA;&lt;p&gt;I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Access Raspberry Pi from iPad</title>
       <link>https://www.kkoyung.dev/access-raspberry-pi-from-ipad/</link>
