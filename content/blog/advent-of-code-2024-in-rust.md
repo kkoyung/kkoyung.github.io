@@ -1,14 +1,16 @@
 +++
-title = "Advent of Code 2024"
+title = "Advent of Code 2024 in Rust"
 date = "2025-02-04T12:25:16+08:00"
-tags = ["adventofcode",]
+tags = ["adventofcode","rust",]
 +++
 
 [Advent of Code](https://adventofcode.com) is an Advent calendar of small programming puzzles released every December by [Eric Wastl](http://was.tl/). A new puzzle, consisting of two parts, is released each day from 1 Dec to 25 Dec. Participants can use any programming language to solve the puzzles.
 
-I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!
+I participated in this event for the first time in 2023. However, I was quite busy that month, so I did not complete all the puzzles. In 2024, I joined again with the goal of solving all the puzzles. From 1 Dec to 19 Dec, I solved to puzzles on the date it was released. After 19 Dec, I decided to take a break and enjoy the holidays, so I postponed the last 6 puzzles to January. Recent, I finally completed all the puzzles from Advent of Code 2024. My solutions were written in Rust, and they can be found in my GitHub repository [kkoyung/advent-of-code-2024](https://github.com/kkoyung/advent-of-code-2024).
 
-After solving each puzzle, I jotted down brief notes about what I learned, how I approached the solution, or some random thoughts I had. I'd like to share some of them here.
+Many thanks to Eric Wastl for creating such a fun event. Solving these puzzles has been an incredibly enjoyable experience!
+
+After solving each puzzle, I jotted down brief notes about what I learned, how I approached the solution, or some random thoughts I had. I'd like to share some of them here. Some are specifically related to Rust.
 
 ## Finding the number of digits of a number (Day 7: Bridge Repair)
 
