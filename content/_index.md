@@ -21,7 +21,7 @@ Kingsley Yung\
 
 ## Contact and Links
 
-- Email: `kingsley AT kkoyung DOT dev`
+- Email: kingsley AT kkoyung DOT dev
 - GitHub: [kkoyung](https://github.com/kkoyung)
 - Codeberg: [kkoyung](https://codeberg.org/kkoyung)
 - PGP key: [[from my website](/pubkey.asc)] [[from openpgp.org](https://keys.openpgp.org/search?q=kingsley%40kkoyung.dev)]
