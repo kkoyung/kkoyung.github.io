@@ -16,7 +16,7 @@ Beyond theoretical work, I enjoy programming and contributing to the open-source
 
 * *Limits of Sequential Local Algorithms on the Random k-XORSAT Problem*\
 Kingsley Yung\
-[ICALP 2024](https://doi.org/10.4230/LIPIcs.ICALP.2024.123) [[arXiv](https://arxiv.org/abs/2404.17775)]\
+ICALP 2024 [[DOI](https://doi.org/10.4230/LIPIcs.ICALP.2024.123), [arXiv](https://arxiv.org/abs/2404.17775), [Slides](/files/icalp-2024-slides.pdf)]\
 **Best Student Paper Award of ICALP 2024**
 
 ## Contact and Links
