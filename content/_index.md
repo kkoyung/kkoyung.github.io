@@ -5,7 +5,7 @@ date = 2024-04-17T21:24:44+08:00
 
 {{< propic >}}
 
-Hi, I'm Kingsley Yung, also known as Yung King On (in Cantonese). I recently got my PhD in computer science at [CUHK](https://www.cuhk.edu.hk) in Hong Kong, under the supervision of [Andrej Bogdanov](https://andrejb.net/) and [Farzan Farnia](https://www.cse.cuhk.edu.hk/~farnia/).
+Hi, I'm Kingsley Yung, also known as Yung King On (in Cantonese). I received my PhD in Computer Science at [CUHK](https://www.cuhk.edu.hk) in Hong Kong in 2024, under the supervision of [Andrej Bogdanov](https://andrejb.net/) and [Farzan Farnia](https://www.cse.cuhk.edu.hk/~farnia/).
 Before that, I received my BSc in Mathematics and MSc in Computer Science from the same university.
 
 My research interests include probabilistic combinatorics, random constraint satisfaction problems, average-case complexity, cryptography, and any interesting problems in theoretical computer science.
