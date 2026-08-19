@@ -5,12 +5,18 @@ date = 2024-04-17T21:24:44+08:00
 
 {{< propic >}}
 
-Hi, I'm Kingsley Yung, also known as Yung King On (in Cantonese). I received my PhD in Computer Science at [CUHK](https://www.cuhk.edu.hk) in Hong Kong in 2024, under the supervision of [Andrej Bogdanov](https://andrejb.net/) and [Farzan Farnia](https://www.cse.cuhk.edu.hk/~farnia/).
-Before that, I received my BSc in Mathematics and MSc in Computer Science from the same university.
+Hi, I’m Kingsley Yung (also known as Yung King On in Cantonese). I completed my PhD in Computer Science and Engineering at [CUHK](https://www.cuhk.edu.hk) in Hong Kong in 2024, under the supervision of [Andrej Bogdanov](https://andrejb.net/) and [Farzan Farnia](https://www.cse.cuhk.edu.hk/~farnia/).
+Before that, I received my BSc in Mathematics and MSc in Computer Science, both also at CUHK.
 
-My research interests include probabilistic combinatorics, random constraint satisfaction problems, average-case complexity, cryptography, and any interesting problems in theoretical computer science.
+My research interests include random constraint satisfaction problems, average-case complexity, geometric barriers to computation, phase transition, probabilistic combinatorics, cryptography.
 
-Beyond theoretical work, I enjoy programming and contributing to the open-source community. You can find my code in my [GitHub profile](https://github.com/kkoyung). Lately, I've been particularly fascinated by the [Rust programming language](https://www.rust-lang.org/). Its design philosophy resonates with me.
+In addition to my theoretical work, I also enjoy programming and contributing to the open-source community. Rust is my favorite programming language. I'm currently one of the maintainers of the [Servo](https://servo.org) browser engine.
+
+---
+
+I am currently seeking postdoctoral and research opportunities in theoretical computer science. If you see a potential fit, please feel free to contact me by email at [kingsley@kkoyung.dev](mailto:kingsley@kkoyung.dev).
+
+I am also open to other opportunities where you think my background may be a good fit.
 
 ## Publications
 
@@ -21,7 +27,7 @@ ICALP 2024 [[DOI](https://doi.org/10.4230/LIPIcs.ICALP.2024.123), [arXiv](https:
 
 ## Contact and Links
 
-- Email: kingsley AT kkoyung DOT dev
+- Email: [kingsley@kkoyung.dev](mailto:kingsley@kkoyung.dev)
 - GitHub: [kkoyung](https://github.com/kkoyung)
 - Codeberg: [kkoyung](https://codeberg.org/kkoyung)
 - PGP key: [[from my website](/pubkey.asc)] [[from openpgp.org](https://keys.openpgp.org/search?q=kingsley%40kkoyung.dev)]
