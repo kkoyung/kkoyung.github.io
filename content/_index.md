@@ -18,6 +18,8 @@ I am currently seeking postdoctoral and research opportunities in theoretical co
 
 I am also open to other opportunities where you think my background may be a good fit.
 
+---
+
 ## Publications
 
 * *Limits of Sequential Local Algorithms on the Random k-XORSAT Problem*\
